@@ -15,7 +15,7 @@ while partidasj1 < 3 and partidasj2 < 3:
     print(f'Primer dado del jugador 1 : {dado1j2}')
     print(f'Segundo dado del jugador 1 : {dado2j2}')
 
-    #voy a guardar todos los dados en una lista
+    #voy a guardar todos los dados en una coleccion
     resultado = {dado1j1,dado2j1,dado1j2,dado2j2}
     print (resultado)
 
