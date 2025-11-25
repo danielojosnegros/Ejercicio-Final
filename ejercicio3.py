@@ -12,15 +12,15 @@ while partidasj1 < 3 and partidasj2 < 3:
     input("Presione intro para lanzar el jugador 2: ")
     dado1j2 = random.randint(1,6)
     dado2j2 = random.randint(1,6)
-    print(f'Primer dado del jugador 1 : {dado2j1}')
+    print(f'Primer dado del jugador 1 : {dado1j2}')
     print(f'Segundo dado del jugador 1 : {dado2j2}')
 
     #voy a guardar todos los dados en una lista
-    resultado = (dado1j1,dado2j1,dado1j2,dado2j2)
+    resultado = {dado1j1,dado2j1,dado1j2,dado2j2}
     print (resultado)
 
 #se comprueban los datos
-    if  dado1j1 == dado2j1 or dado1j1 == dado1j2 or dado1j1 == dado2j2 or dado1j2 == dado2j2:
+    if  len(resultado) < 4:
         partidasj1 += 1
         print("gana jugador 1")
         if partidasj1 == 3:
