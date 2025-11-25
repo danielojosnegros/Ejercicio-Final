@@ -15,7 +15,7 @@ while partidasj1 < 3 and partidasj2 < 3:
     print(f'Primer dado del jugador 1 : {dado1j2}')
     print(f'Segundo dado del jugador 1 : {dado2j2}')
 
-    #voy a guardar todos los dados en una coleccion
+    #voy a guardar todos los dados en una lista
     resultado = {dado1j1,dado2j1,dado1j2,dado2j2}
     print (resultado)
 
@@ -40,16 +40,20 @@ while partidasj1 < 3 and partidasj2 < 3:
         print("gana jugador 2")
         if partidasj2 == 3:
             print("Enorabuena el Jugador 2 ha ganado")
-            try:
-                repetir = input("¿Desea volver a jugar otra partida¿: ").lower()
-            except ValueError:
-                print("No se ha entendido bien ")
 
-                if repetir in ("si","sí"):
+            #repetir = input("¿Desea volver a jugar otra partida¿: ").lower()
+
+            while True:
+                repetir = input("¿Desea volver a jugar otra partida¿: ").lower().strip("")
+                if repetir in ("si", "sí"):
                     partidasj1 = 0
                     partidasj2 = 0
-                if repetir == "no":
+                elif repetir == "no":
+                    print("Muchas gracias por jugar")
+                    print("Hasta la proxima")
                     break
-            except ValueError:
-                print("No se ha entendido bien ")
+                else:
+                    print("No se ha entendido bien, Desea volver a jugar: ")
+
        # print(partidasj2)
+
