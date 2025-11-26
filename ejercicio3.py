@@ -25,16 +25,6 @@ while partidasj1 < 3 and partidasj2 < 3:
         print("gana jugador 1")
         if partidasj1 == 3:
             print("Enorabuena el Jugador 1 ha ganado")
-            try:
-                repetir = input("¿Desea volver a jugar otra partida¿: ").lower()
-                if repetir in ("si","sí"):
-                    partidasj1 = 0
-                    partidasj2 = 0
-                if repetir == "no":
-                    break
-            except ValueError:
-                print("No se ha entendido bien ")
-        #print(partidasj1)
     else:
         partidasj2 += 1
         print("gana jugador 2")
@@ -43,17 +33,16 @@ while partidasj1 < 3 and partidasj2 < 3:
 
             #repetir = input("¿Desea volver a jugar otra partida¿: ").lower()
 
-            while True:
-                repetir = input("¿Desea volver a jugar otra partida¿: ").lower().strip("")
-                if repetir in ("si", "sí"):
-                    partidasj1 = 0
-                    partidasj2 = 0
-                elif repetir == "no":
-                    print("Muchas gracias por jugar")
-                    print("Hasta la proxima")
-                    break
-                else:
-                    print("No se ha entendido bien, Desea volver a jugar: ")
+        while True:
+            repetir = input("¿Desea volver a jugar otra partida¿: ").lower().strip("")
+            if repetir in ("si", "sí"):
+                partidasj1 = 0
+                partidasj2 = 0
+            elif repetir == "no":
+                print("Muchas gracias por jugar")
+                print("Hasta la proxima")
+                break
+            else:
+                print("No se ha entendido bien, Desea volver a jugar: ")
 
        # print(partidasj2)
-
